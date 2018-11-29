@@ -1,7 +1,7 @@
 <cfcomponent>
 	
 	<!--- Constructor ------------------------------------------------------------------------->
-    <cffunction name="init" output="no" returntype="ajaxProxyHelper">
+    <cffunction name="init" output="yes" returntype="ajaxProxyHelper">
 		<cfreturn this/>
   	</cffunction> 
 	

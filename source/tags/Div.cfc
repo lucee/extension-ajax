@@ -15,7 +15,7 @@
 		tagName:	{required:false,type:"string",default:"div",hint="The HTML container tag to create."}
 	}/>
          
-    <cffunction name="init" output="no" returntype="void" hint="invoked after tag is constructed">
+    <cffunction name="init" output="yes" returntype="void" hint="invoked after tag is constructed">
     	<cfargument name="hasEndTag" type="boolean" required="yes">
       	<cfargument name="parent" type="component" required="no" hint="the parent cfc custom tag, if there is one">
 		<cfset variables.hasEndTag = arguments.hasEndTag />
@@ -55,7 +55,7 @@
 	</cffunction>
 	
 	<!---doBind--->		   
-    <cffunction name="doBind" output="no" returntype="void">
+    <cffunction name="doBind" output="yes" returntype="void">
    		<cfargument name="attributes" type="struct">
    		<cfargument name="caller" type="struct">
 		

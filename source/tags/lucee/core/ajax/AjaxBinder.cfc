@@ -10,7 +10,7 @@
 	<cfset variables.instance.proxyHelper = createObject('component','ajaxProxyHelper').init() />		
 	
 	<!--- Constructor --->
-    <cffunction name="init" output="no" returntype="ajaxBinder">
+    <cffunction name="init" output="yes" returntype="ajaxBinder">
 		<cfreturn this/>
   	</cffunction>
 

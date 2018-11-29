@@ -24,7 +24,7 @@
 	</cfif>
 		
 	<!--- Constructor --->
-    <cffunction name="init" output="no" returntype="void">
+    <cffunction name="init" output="yes" returntype="void">
     	<cfargument name="scriptSrc" type="string" default="#variables.instance.SCRIPTSRC#" />
     	<cfargument name="cssSrc" type="string" default="#variables.instance.CSSSRC#" />
     	<cfargument name="loaderSrc" type="string" default="#variables.instance.LOADERSRC#" />
@@ -53,7 +53,7 @@
   	</cffunction> 
 	
 	<!--- Write Header --->	
-	<cffunction name="writeHeader" returntype="void" access="public" description="writes data to html header but only once">
+	<cffunction name="writeHeader" returntype="void" output="yes" access="public" description="writes data to html header but only once">
         <cfargument name="text" required="yes" type="string">
 		<cfargument name="id" required="yes" type="string">
 		
@@ -75,7 +75,7 @@
     </cffunction>
 
 	<!--- StripWhiteSpace --->	
-	<cffunction name="stripWhiteSpace" output="no" returntype="string" hint="Strips whitespace outside tags from string"> 
+	<cffunction name="stripWhiteSpace" output="yes" returntype="string" hint="Strips whitespace outside tags from string"> 
 		<cfargument name="str" type="string" default="" required="no"/>
 		<cfreturn trim(reReplaceNoCase(arguments.str,"(</?.*?\b[^>]*>)[\s]{1,}|[\r]{1,}(</?.*?\b[^>]*>)","\1#chr(13)##chr(10)#\2","All"))/>
 	</cffunction>

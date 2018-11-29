@@ -29,7 +29,7 @@
 		buttons:        {required:false,type:"string",default:"{}",hint:""}					
 	}>
          
-    <cffunction name="init" output="no" returntype="void"
+    <cffunction name="init" output="yes" returntype="void"
       hint="invoked after tag is constructed">
     	<cfargument name="hasEndTag" type="boolean" required="yes">
       	<cfargument name="parent" type="component" required="no" hint="the parent cfc custom tag, if there is one">
@@ -84,7 +84,7 @@
 	</cffunction>
 	
 	<!---doWindow--->		   
-    <cffunction name="doWindow" output="no" returntype="void">
+    <cffunction name="doWindow" output="yes" returntype="void">
    		<cfargument name="attributes" type="struct">
    		<cfargument name="caller" type="struct">
 		

@@ -16,14 +16,14 @@
 		methods:	{required:false,type:"string",default:"",hint="Comma delimited list of methods name. If exists only the method ( if remote ) specified will be exposed in the proxy object."}
 	}>
 
-    <cffunction name="init" output="no" returntype="void"
+    <cffunction name="init" output="yes" returntype="void"
       hint="invoked after tag is constructed">
     	<cfargument name="hasEndTag" type="boolean" required="yes">
       	<cfargument name="parent" type="component" required="no" hint="the parent cfc custom tag, if there is one">
       	<cfset super.init() />
   	</cffunction>
 
-    <cffunction name="onStartTag" output="no" returntype="boolean">
+    <cffunction name="onStartTag" output="yes" returntype="boolean">
    		<cfargument name="attributes" type="struct">
    		<cfargument name="caller" type="struct">
 
@@ -55,7 +55,7 @@
         <cfreturn false>
     </cffunction>
 
-    <cffunction name="doCFC" output="no" returntype="void">
+    <cffunction name="doCFC" output="yes" returntype="void">
    		<cfargument name="attributes" type="struct">
    		<cfargument name="caller" type="struct">
 
@@ -85,7 +85,7 @@
 
 	</cffunction>
 
-    <cffunction name="doBind" output="no" returntype="void">
+    <cffunction name="doBind" output="yes" returntype="void">
    		<cfargument name="attributes" type="struct">
    		<cfargument name="caller" type="struct">
 
@@ -110,12 +110,12 @@
 	<!--- Private --->
 
 	<!---getProxyHelper--->
-	<cffunction name="getProxyHelper" output="false" returntype="ajaxProxyHelper" access="private">
+	<cffunction name="getProxyHelper" output="yes" returntype="ajaxProxyHelper" access="private">
 		<cfreturn variables.instance.proxyHelper />
 	</cffunction>
 
 	<!--- getAjaxBinder --->
-	<cffunction name="getAjaxBinder" output="false" returntype="ajaxBinder" access="private">
+	<cffunction name="getAjaxBinder" output="yes" returntype="ajaxBinder" access="private">
 		<cfreturn variables.instance.ajaxBinder />
 	</cffunction>
 

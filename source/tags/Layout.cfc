@@ -25,7 +25,7 @@
 								
 	}>
          
-    <cffunction name="init" output="no" returntype="void" hint="invoked after tag is constructed">
+    <cffunction name="init" output="yes" returntype="void" hint="invoked after tag is constructed">
     	<cfargument name="hasEndTag" type="boolean" required="yes">
       	<cfargument name="parent" type="component" required="no" hint="the parent cfc custom tag, if there is one">
       	<cfset var js = "" />
