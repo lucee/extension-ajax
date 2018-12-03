@@ -50,8 +50,16 @@ release-type: ${releaseType}
     <copy todir="${temp}/META-INF/">
       <fileset dir="${srcImg}/">
         <include name="logo.png"/>
+        <include name="MANIFEST.MF"/>
       </fileset>
     </copy>
+
+    <!--  <copy todir="${dist}/META-INF">
+      <fileset dir="${srcImg}/">
+        <include name="logo.png"/>
+        <include name="MANIFEST.MF"/>
+      </fileset>
+    </copy> -->
 
     <!-- copy the tags -->
     <copy todir="${temp}/tags">

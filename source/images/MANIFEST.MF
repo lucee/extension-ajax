@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-Date: 2018-10-08 12:26:12
+version: "0.0.0.2"
+id: "6E2CB28F-98FB-4B51-B6BE6C64ADF35473"
+name: "Ajax Extension"
+description: "Lucee Ajax Extension."
+release-type: server
