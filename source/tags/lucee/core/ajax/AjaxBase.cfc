@@ -16,11 +16,12 @@
 	<cfset variables.instance.LUCEEJSSRC = "/mapping-tag/lucee/core/ajax/JSLoader.cfc?method=get&lib=" />
 
 	<!--- Default to current context, can be overridden on init --->
-	<cfif getContextRoot() neq "/">
-		<cfset variables.instance.SCRIPTSRC = getContextRoot() & variables.instance.SCRIPTSRC />
-		<cfset variables.instance.CSSSRC = getContextRoot() & variables.instance.CSSSRC />
-		<cfset variables.instance.LOADERSRC = getContextRoot() & variables.instance.LOADERSRC />
-		<cfset variables.instance.LUCEEJSSRC = getContextRoot() & variables.instance.LUCEEJSSRC />
+	<cfset variables.contextRoot = getContextRoot()>
+	<cfif variables.contextRoot neq "/">
+		<cfset variables.instance.SCRIPTSRC = variables.contextRoot & variables.instance.SCRIPTSRC />
+		<cfset variables.instance.CSSSRC = variables.contextRoot & variables.instance.CSSSRC />
+		<cfset variables.instance.LOADERSRC = variables.contextRoot & variables.instance.LOADERSRC />
+		<cfset variables.instance.LUCEEJSSRC = variables.contextRoot & variables.instance.LUCEEJSSRC />
 	</cfif>
 		
 	<!--- Constructor --->
