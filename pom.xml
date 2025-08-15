@@ -14,7 +14,6 @@
         <maven.compiler.target>11</maven.compiler.target>
         <id>6E2CB28F-98FB-4B51-B6BE6C64ADF35473</id>
         <bundlename>org.lucee.ajax.extension</bundlename>
-        <luceeCoreVersion>7.0.0.110</luceeCoreVersion>
         <releaseType>server</releaseType>
         <label>Ajax Extension</label>
         <release.url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</release.url>
@@ -122,7 +121,6 @@
                                     <property name="class" value="${class}"/>
                                     <property name="filename" value="${project.artifactId}"/>
                                     <property name="id" value="${id}"/>
-                                    <property name="luceeCoreVersion" value="${luceeCoreVersion}"/>
                                     <property name="releaseType" value="${releaseType}"/>
                                     <property name="label" value="${label}"/>
                                     <property name="description" value="${project.description}"/>
