@@ -32,6 +32,8 @@
 Built-Date: ${NOW}
 version: "${bundleversion}"
 id: "${id}"
+groupId: "${groupId}"
+artifactId: "${artifactId}"
 name: "${label}"
 description: "${description}"
 release-type: ${releaseType}
