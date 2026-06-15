@@ -69,45 +69,6 @@ release-type: ${releaseType}
       </fileset>
     </copy>
     
-
-    <!-- copy the components
-    <copy todir="${temp}/components">
-      <fileset dir="${src}/components">
-        <include name="**/*.cfc"/>
-      </fileset>
-    </copy> -->
-
-    <!-- copy the plugins
-    <copy todir="${temp}/webcontexts/admin/plugin">
-      <fileset dir="${src}/plugins">
-        <include name="**/*.cfc"/>
-        <include name="**/*.cfm"/>
-        <include name="**/language.xml"/>
-      </fileset>
-    </copy> -->
-
-    <!-- copy the event-gateway
-    <copy todir="${temp}/event-gateways">
-      <fileset dir="${src}/event-gateways">
-        <include name="**/*.cfc"/>
-      </fileset>
-    </copy> -->
-
-
-    <!-- copy the web context
-    <copy todir="${temp}/applications">
-      <fileset dir="${srcCFML}">
-        <include name="**/*.*"/>
-      </fileset>
-    </copy> -->
-
-    <!-- copy the jars
-    <copy todir="${temp}/jars">
-      <fileset dir="${jars}">
-        <include name="**/*.jar"/>
-      </fileset>
-    </copy> -->
-
     <!-- Zip everything  -->
      <zip destfile="${target}/${filename}-${bundleversion}.lex">
         <zipfileset dir="${temp}"/>
